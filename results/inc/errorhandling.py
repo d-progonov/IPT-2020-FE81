@@ -7,7 +7,10 @@ errors = []
 with open(ERROR_FILE, 'r') as ef:
   for line in ef:
     errors.append(line.strip())
-    
+
+def error_message():
+  return random.choice(errors) 
+
 def handle(e: Exception):
-  print(e)
-  print(random.choice(errors))
+  print(e.__context__())
+  print(error_message())
