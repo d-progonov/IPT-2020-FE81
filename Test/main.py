@@ -9,6 +9,7 @@ def countdown(N, M):
     while Temp < M:
         yield Res
         Res =+ pow(N, M)
+        Temp =+ 1
 
 
 val = countdown(N, M)
