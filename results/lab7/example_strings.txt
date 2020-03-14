@@ -1,0 +1,8 @@
+AAA
+foo AAA bar baz
+foo bar baz
+s s d
+AAA
+AA A
+try new str AAA
+5788
