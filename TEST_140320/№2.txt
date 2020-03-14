@@ -1,0 +1,5 @@
+N = input("Enter a list numbers separated by comma: ")
+List = N.split(",")
+Set = set(List)
+print("List is ", List)
+print("Set is ", Set)
