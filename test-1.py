@@ -15,7 +15,7 @@ def main():
   lists = []
   N = int(input("N: "))
   for i in range(N):
-    lists.append(input("lst {0}: ".format(i)))
+    lists.append(input("lst {0}: ".format(i)).split(' '))
   print(solution(lists))    
 
 
