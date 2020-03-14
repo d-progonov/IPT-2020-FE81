@@ -12,5 +12,5 @@ def error_message():
   return random.choice(errors) 
 
 def handle(e: Exception):
-  print(e.__context__())
+  print(e.what())
   print(error_message())
