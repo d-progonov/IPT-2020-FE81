@@ -14,7 +14,7 @@
 
 # If we want to get result in [0, inf):
 '''
-from mpmath import nsum, infё00
+from mpmath import nsum, inf
 
 def zetoToinf():
     s = nsum(lambda i: (1 / (pow(2, i) ) + (1 / (pow(3, i)))), [0, inf])
