@@ -21,5 +21,7 @@ if (a==b or b==c or a==c):
     a+=5
     b+=5
     c+=5
-print("a = {}, b = {}, c = {}.".format(a,b,c))
+    print("a = {}, b = {}, c = {}.".format(a,b,c))
+else:
+    print("Равных нет")
 input("Any key to exit...")
