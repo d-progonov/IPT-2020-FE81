@@ -1,6 +1,6 @@
 while(1):
     try:
-        a = int (input("Enter a = "))
+        a = abs(int(input("Enter a = ")))
         if (a<10000 or a>99999):
             raise ValueError
         break
