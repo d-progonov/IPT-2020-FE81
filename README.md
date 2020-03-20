@@ -1,8 +1,8 @@
 # IPT-2020-FE81
 Repository for laboratory works (Programming course)
 ***
-###### Student: Mierkielov Ihor h6
-###### Student: Var: 20 h6
+#### Student: Mierkielov Ihor
+##### Student: Var: 20 
 
 | № Laboratory   | In Process  | Done | 
 |:--------------:|:-----------:|:----:|
