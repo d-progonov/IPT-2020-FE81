@@ -1,0 +1,12 @@
+import math
+  
+x=float(input("Введите первое число x: "))
+z=float(input("Введите второе число z: "))
+y=x+(math.exp(z-1))/1-(x**2)*(math.fabs(x-z))
+
+
+a=1-(x**2)*(math.fabs(x-z))
+if a==0:
+ print("Ошибка Знаменатель Равен нулю")
+else:
+     print("Результат y:", y)
