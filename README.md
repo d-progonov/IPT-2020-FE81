@@ -3,12 +3,12 @@ Repository for laboratory works (Programming course)
 
 Variant 1
 
-| Lab No. 	| Submitted 	| Mark 	| Finished 	|
+| Lab No. 	| Submitted 	| Mark 	| Protocol 	|
 |:-------:	|:---------:	|:----:	|:--------:	|
 |    1    	|     x     	|   3  	|     x    	|
 |    2    	|     x     	|   3  	|     x    	|
-|    3    	|     x     	|   **1**   |          	|
-|    4    	|     x     	|      	|          	|
+|    3    	|     x     	|   **1**   |     x    	|
+|    4    	|     x     	|      	|     x    	|
 |    5    	|     x     	|   3  	|     x    	|
 |    6    	|     x     	|   3  	|     x    	|
 |    7    	|     x     	|   3  	|     x    	|
