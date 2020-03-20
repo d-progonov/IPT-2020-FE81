@@ -2,7 +2,7 @@
 Repository for laboratory works (Programming course)
 ***
 #### Student: Mierkielov Ihor
-##### Student: Var: 20 
+#### Var: 20 
 
 | № Laboratory   | In Process  | Done | 
 |:--------------:|:-----------:|:----:|
