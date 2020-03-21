@@ -1,4 +1,4 @@
 D = {'x':'a','y':'b','z':'c'}
 print(D)
-D={a:b for b, a in D.items()}
+D={a:x for x, a in D.items()}
 print(D)
