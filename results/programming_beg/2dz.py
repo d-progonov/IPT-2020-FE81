@@ -1,0 +1,10 @@
+print ('Запишите числа в таком порядке: Сначала a, потом b, потом f')
+a = float(input())
+print ('a = :', a)
+b = float(input())
+print ('b = :', b)
+f = float(input())
+print ('f = :', f)
+k = (a + b - f / a) + f * a * a - (a + b)
+
+print(str(k))
