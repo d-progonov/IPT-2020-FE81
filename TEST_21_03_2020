@@ -1,0 +1,6 @@
+Задание 1.
+
+Задание 2.
+d = {'a', 's', 4,5}
+for i in range len(d):
+  d(i) = d.pop(i)
