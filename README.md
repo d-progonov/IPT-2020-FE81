@@ -3,4 +3,4 @@ Repository for laboratory works (Programming course)
 
 Variant 2 
 
-There are redone programs in the folder "lab 3".
+There are added files in the folder "lab 3" and "lab 5". Homework is in the folder "results".
