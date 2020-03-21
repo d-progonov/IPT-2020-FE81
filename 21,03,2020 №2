@@ -1,0 +1,4 @@
+dict = {'x':'a','y':'b','z':'c'}
+print(dict)
+diction={a:b for b, a in dict.items()}
+print(diction)
