@@ -1,4 +1,4 @@
-dict = {'x':'a','y':'b','z':'c'}
-print(dict)
-diction={a:b for b, a in dict.items()}
-print(diction)
+D = {'x':'a','y':'b','z':'c'}
+print(D)
+D={a:b for b, a in D.items()}
+print(D)
