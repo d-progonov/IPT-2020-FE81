@@ -27,5 +27,5 @@ try:
 except ValueError:print("Введите другое значаение для n!!!")
 for row in a:
     print(' '.join([str(elem) for elem in row]))
-print(Acounter)
-print(Bcounter)
+print("a:",Acounter)
+print("b:",Bcounter)
