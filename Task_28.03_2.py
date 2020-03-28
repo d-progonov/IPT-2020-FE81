@@ -20,6 +20,9 @@ for ch in mess:
     messlist.append(ch)
 out = []
 for ch in messlist:
+    if ch == ' ':
+        out.append(' ')
+        continue
     out.append(alphabet[(alphabet.index(ch)+n)%26])
 outmess = ""
 outmess = outmess.join(out)
@@ -27,6 +30,9 @@ print("Crypted: ",outmess)
 
 out2 = []
 for ch in out:
+    if ch == ' ':
+        out2.append(' ')
+        continue
     out2.append(alphabet[(alphabet.index(ch)-n)%26])
 out2mess = ""
 out2mess = out2mess.join(out2)
