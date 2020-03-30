@@ -1,7 +1,5 @@
-d = {"elem1": 1, "elem2": 2}
-print(d)
+dict_ = {'elem1': 1, 'elem2': 2}
 
-d["elem1"], d.get("elem1") = d.get("elem1"), d["elem1"]
-print(d)
+dict_['elem1'], dict_.get('elem1') = dict_.get('elem1'), d['elem1']
 
 
