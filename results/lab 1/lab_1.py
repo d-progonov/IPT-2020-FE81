@@ -2,11 +2,11 @@ import math
 
 try:
     x = float(input("Введите значение переменной x: "))
-    if (x >= math.sqrt(5) or x <= -(math.sqrt(5))):
+    if math.fabs(x) > 2:
         y = float(math.sqrt(math.log((x**2)-4)))
         print("Ваш ответ: ", y)
     else:
-        print("Некорректное значение переменной x !")
+        print("Некорректное значение переменной x!")
 
-except :
+except ValueError:
         print("Проверьте Ваши данные и введите заново!")
