@@ -5,9 +5,11 @@ from lab2 import num_sign
 def find_series_sum():
     sum = 0
     a = 1
-    while a != 14:
+    while True:
         sum += math.log(math.factorial(a)) / (a ** 2)
         a += 1
+        if a == 14:
+            break
     return sum
 
 
@@ -17,7 +19,11 @@ def find_series_sum():
 # Part b
 
 def find_all_div(n: int):
-    return list(num for num in range(1, n+1) if n % num == 0)
+    lst = []
+    for i in range(1, n+1):
+        if n % i == 0:
+            lst.append(i)
+    return lst
 
 
 def valid_n(n: str):
