@@ -17,3 +17,24 @@
 
 Для обработки асинхронных событий можно использовать ThreadPool или ProcessPool. Модуль concurrent.futures предоставляет их реализацию.
 Суть в том что б закинуть в очередь задачу а потоки сами возьмут её по готовности
+
+
+
+
+Вот простой код gui:
+
+from tkinter import *
+
+
+def clicked():
+    lbl.configure(text="Я же просил...")
+
+
+window = Tk()
+window.title("Добро пожаловать")
+window.geometry('400x400')
+lbl = Label(window, text="Привет", font=("Helvetica", 50))
+lbl.grid(column=0, row=0)
+btn = Button(window, text="Не нажимать!", command=clicked)
+btn.grid(column=1, row=0)
+window.mainloop()
