@@ -1,0 +1,5 @@
+'l'he pair of these elements from prime number list give our value in sum:10+2
+'l'he pair of these elements from prime number list give our value in sum:9+3
+'l'he pair of these elements from prime number list give our value in sum:7+5
+'l'he pair of these elements from prime number list give our value in sum:5+7
+'l'he pair of these elements from prime number list give our value in sum:1+11
