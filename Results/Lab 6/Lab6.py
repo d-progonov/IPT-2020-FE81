@@ -15,18 +15,6 @@ def f(a, m, c=1):
     return g(a, c, m) * f(a, (m - 1 - g(a, m, c)), c) + m
 
 
-def lab5_1():
-    print("HI! Lab5!")
-    a = input("Input a: ")
-    m = input("Input m: ")
-    c = input("Input c: ")
-
-    a = check_input_data(1, a)
-    c = check_input_data(1, c)
-    m = check_input_data(1, m)
-
-    return f(a, m, c)
-
 
 def fibon(n):
     if n < 0:
@@ -41,12 +29,26 @@ def fibon(n):
     return fibon(n - 1) + fibon(n - 2)
 
 
-def lab5_2():
-    print("HI! Lab5_2!")
-    a = input("Input num for fib: ")
+def lab6():
+    print("HI! Lab6!")
+
+    data = open("data.txt", "r")
+    a = data.readline()
+    c = data.readline()
+    m = data.readline()
+    fibNum = data.readline()
+    data.close()
+
     a = check_input_data(1, a)
-    fibon(a)
+    c = check_input_data(1, c)
+    m = check_input_data(1, m)
+    fibNum = check_input_data(1, fibNum)
+
+    out = open("output.txt", "w")
+    print(f(a, m, c))
+    out.write("f(m)= " + str(f(a, m, c)) + "\n")
+    out.write("fibon(fibNum)= " + str(fibon(fibNum)))
+    out.close()
 
 
-print(lab5_1())
-print(lab5_2())
+lab6()
