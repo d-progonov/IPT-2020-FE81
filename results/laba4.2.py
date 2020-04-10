@@ -1,12 +1,12 @@
 import random
-n = input("Enter n: ")
+D = input("Enter D: ")
 a=[]
 
 try:
     size = random.randint(3, 20)
     print("Size:", size)
     print()
-    n=int(n)
+    D=int(D)
     i=0
     for i in range(size):
         a.append(random.randint(1,100))
@@ -14,13 +14,12 @@ try:
     del a[0]
     print("a:", a)
 
-    if n<0:
-        n=abs(n)
-        for i in range(n):
-            a.append(a.pop(0))
-    else:
-        for i in range(n):
+    if D>0:
+        for i in range(D):
             a.insert(0,a.pop())
-    print("a:", a)
+            print("a:", a)
+    else:print("Введите другое значаение для D!!!")
 
-except ValueError:print("Введите другое значаение для n!!!")
+
+
+except ValueError:print("Введите другое значаение для D!!!")
