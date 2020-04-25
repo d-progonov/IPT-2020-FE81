@@ -38,10 +38,7 @@ paramstyle - Строковая константа. Устанавливает �
 a = []
 for x in range (0, 1024):
   a.append(x)
-  
 print(a)
-
-print("\n")
 
 b = []
 for elem in a:
