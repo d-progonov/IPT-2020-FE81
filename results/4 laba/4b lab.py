@@ -1,32 +1,24 @@
-import random
+from random import randrange
 
-arrr = [random.randint(0, 100) for i in range(10)]
-print(arrr)
 
-i = 0
+def is_even(num):
+    return (num % 2) == 0
 
-while i < 20:
 
-    if arrr [i] % 2 == 0:
-        arrr.insert(i+1, arrr[i-1]+2)
+def main():
+    randoms = [randrange(start=0, stop=90, step=1) for i in range(10)]
+    print(randoms)
+    k = int(input('Enter k(zero-indexed): '))
+    randoms.pop(k)
+    print(randoms)
+    i = 0
+    while i < len(randoms):
+        if is_even(randoms[i]):
+            randoms.insert(i + 1, 0)
+            i += 1
         i += 1
-    i += 1
-    if  len(arrr) == i:
-        break
-  
-print (arrr)
-
-i = 0
-
-while i < 10:
-
-    if arrr [i] == 0:
-        arrr.pop(i)
-        print (arrr)
-        break
-
-    i += 1
+    print(randoms)
 
 
-else:
-    print ('There is no element that is equal to zero')
+if __name__ == '__main__':
+    main()
