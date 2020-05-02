@@ -1,0 +1,27 @@
+def gnomesort(data):
+    i, size = 1, len(data)
+    while i < size:
+        if data[i - 1] <= data[i]:
+            i += 1
+        else:
+            data[i - 1], data[i] = data[i], data[i - 1] 
+            if i > 1:
+                i -= 1
+    return data
+
+def quicksort(nums):
+   if len(nums) <= 1:
+       return nums
+   else:
+       q = random.choice(nums)
+       s_nums = []
+       m_nums = []
+       e_nums = []
+       for n in nums:
+           if n < q:
+               s_nums.append(n)
+           elif n > q:
+               m_nums.append(n)
+           else:
+               e_nums.append(n)
+       return quicksort(s_nums) + e_nums + quicksort(m_nums)
