@@ -9,19 +9,35 @@ def gnomesort(data):
                 i -= 1
     return data
 
-def quicksort(nums):
-   if len(nums) <= 1:
-       return nums
-   else:
-       q = random.choice(nums)
-       s_nums = []
-       m_nums = []
-       e_nums = []
-       for n in nums:
-           if n < q:
-               s_nums.append(n)
-           elif n > q:
-               m_nums.append(n)
-           else:
-               e_nums.append(n)
-       return quicksort(s_nums) + e_nums + quicksort(m_nums)
+
+Быстрая сортировка
+
+
+def partition(arr,low,high): 
+    i = ( low-1 )         # index of smaller element 
+    pivot = arr[high]     # pivot 
+  
+    for j in range(low , high): 
+        if   arr[j] <= pivot: 
+            i = i+1 
+            arr[i],arr[j] = arr[j],arr[i] 
+  
+    arr[i+1],arr[high] = arr[high],arr[i+1] 
+    return ( i+1 )
+
+def quickSort(arr,low=0,high=-1): 
+    if high == -1:
+        high = (len(arr))-1
+    if low < high: 
+        pi = partition(arr,low,high) 
+        quickSort(arr, low, pi-1) 
+        quickSort(arr, pi+1, high) 
+  
+
+arr = [10, 7, 8, 9, 1, 5] 
+quickSort(arr) 
+print ("Sorted array is:") 
+for i in arr: 
+    print (i), 
+
+input()
