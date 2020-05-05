@@ -2,7 +2,6 @@ from tkinter import *
 import time
 
 
-
 class TShape:
     def __init__(self, x = 0.0, y = 0.0):
         self.x = x
@@ -34,6 +33,9 @@ class Elips:
         y_mov = dest.y - canvas.coords(self.pos_on_canvas)[3]
         canvas.move(self.pos_on_canvas, x_mov, y_mov)
 
+    def delete(self, canvas):
+        canvas.delete(self.pos_on_canvas)
+
 
 
 class Round (Elips):
@@ -56,18 +58,92 @@ class Sector (Elips):
             self.pos_on_canvas = canvas.create_arc(self.left_top.x, self.left_top.y, self.right_bottom.x, self.right_bottom.y, start = self.start_angle, extent = self.angle, fill = self.color, width = self.width)
 
 
-aaa = Elips('red')
-bbb = Round(10, 'red')
-ccc = Sector(0, 90)
+#ROOT
 root = Tk()
 
-c = Canvas(root, width=300, height=500, bg='white')
+#ELEMS
+sect = Sector(0, 90)
+circle = Round(10, 'red')
+elips = Elips('red')
+
+#BOOLS
+sect_spawned = False
+elips_spawned = False
+round_spawned = False
+
+#Canvas
+c = Canvas(root, width=950, height=500, bg='white')
+
+
+def spawn_elips():
+    global elips
+    global elips_spawned
+
+    if elips_spawned:
+        elips.delete(c)
+        elips_spawned = False
+        print(elips_spawned)
+        return
+
+    elips = Elips('red', TPoint(200.0, 200.0))
+    elips.draw(c)
+    elips_spawned = True
+
+
+def spawn_round():
+    global circle
+    global round_spawned
+
+    if round_spawned:
+        circle.delete(c)
+        round_spawned = False
+        return
+    circle = Round(10, 'red')
+    circle.draw(c)
+    round_spawned = True
+
+
+def spawn_sector():
+    global sect
+    global sect_spawned
+
+    if sect_spawned:
+        sect.delete(c)
+        sect_spawned = False
+        return
+    sect = Sector(0, 90)
+    sect.draw(c)
+    sect_spawned = True
+
+
+def elips_move():
+    elips.move(c, TPoint(600.0, 300.0))
+
+
+def round_move():
+    circle.move(c, TPoint(600.0, 300.0))
+
+
+def sector_move():
+    sect.move(c, TPoint(600.0, 300.0))
+
+#BUTTON SETTINGS
+b1 = Button(root, text="Spawn Elips", width=15, height=3, command=spawn_elips)
+b2 = Button(root, text="Spawn Round", width=15, height=3, command=spawn_round)
+b3 = Button(root, text="Spawn Sector", width=15, height=3, command=spawn_sector)
+b4 = Button(root, text="Move Elips", width=15, height=3, command=elips_move)
+b5 = Button(root, text="Move Round", width=15, height=3, command=round_move)
+b6 = Button(root, text="Move Sector", width=15, height=3, command=sector_move)
+
+#PACK SEGMENT
 c.pack()
-
-ccc.draw(c)
-ccc.move(c, TPoint(190, 150))
-ccc.move(c, TPoint(0, 0))
-
-getshit = c.create_oval(10,10, 100,100, width = 1)
+b1.pack(side = LEFT, padx=10)
+b2.pack(side = LEFT, padx=10)
+b3.pack(side = LEFT, padx=10)
+b4.pack(side = LEFT, padx=10)
+b5.pack(side = LEFT, padx=10)
+b6.pack(side = LEFT, padx=10)
 
 root.mainloop()
+
+
