@@ -32,7 +32,7 @@ def lab10():
     num = input("Input how many words to sort: ")
 
     words_to_sort = check_input_data(1, num)
-    if not words_to_sort:
+    if words_to_sort == False:
         return "Wrong input!!!"
     inputList = []
     for i in range(0, words_to_sort):
