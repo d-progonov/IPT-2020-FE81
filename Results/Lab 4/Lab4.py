@@ -63,5 +63,6 @@ def lab4_2():
     for i in range(10, len(foo)+10, 1):
         print(circle.get(i))
 
-# print(lab4_1())
+
+print(lab4_1())
 print(lab4_2())
