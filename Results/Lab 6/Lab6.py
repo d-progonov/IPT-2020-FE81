@@ -1,5 +1,7 @@
 import sys, os
 
+import json
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from include.usefullFuncs import check_input_data
 
@@ -13,7 +15,6 @@ def f(a, m, c=1):
         if m >= 0:
             return m
     return g(a, c, m) * f(a, (m - 1 - g(a, m, c)), c) + m
-
 
 
 def fibon(n):
@@ -32,17 +33,13 @@ def fibon(n):
 def lab6():
     print("HI! Lab6!")
 
-    data = open("data.txt", "r")
-    a = data.readline()
-    c = data.readline()
-    m = data.readline()
-    fibNum = data.readline()
-    data.close()
+    with open("data.txt", "r") as read_file:
+        data = json.load(read_file)
 
-    a = check_input_data(1, a)
-    c = check_input_data(1, c)
-    m = check_input_data(1, m)
-    fibNum = check_input_data(1, fibNum)
+    a = check_input_data(1, data["a Param"])
+    c = check_input_data(1, data["c Param"])
+    m = check_input_data(1, data["m Param"])
+    fibNum = check_input_data(1, data["fibNum"])
 
     out = open("output.txt", "w")
     print(f(a, m, c))

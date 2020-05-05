@@ -1,2 +1,2 @@
-f(m)= False
-fibon(fibNum)= 13
+f(m)= 4
+fibon(fibNum)= 610
