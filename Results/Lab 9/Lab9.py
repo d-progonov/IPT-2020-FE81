@@ -3,19 +3,30 @@ import time
 
 
 class TShape:
-    def __init__(self, x = 0.0, y = 0.0):
-        self.x = x
-        self.y = y
+    def __init__(self, name):
+        self.name = name
+
+    def draw(self, canvas):
+        print("Abstract class, cant draw")
+
+    def move(self, canvas, dest):
+        print("Abstract class, cant move")
+
+    def delete(self, canvas):
+        print("Abstract class, cant delete from canvas")
 
 
 class TPoint (TShape):
     def __init__(self, x = 0.0, y= 0.0, width = 4.0):
-        TShape.__init__(self, x, y)
+        self.x = x
+        self.y = y
+        TShape.__init__(self, "Point")
         self.width = width
 
 
-class Elips:
+class Elips (TShape):
     def __init__(self, color = 'none', left_top = TPoint(10.0, 10.0), right_bottom = TPoint(90.0, 50.0)):
+        TShape.__init__(self, "Elips")
         self.left_top = left_top
         self.color = color
         self.right_bottom = right_bottom
@@ -23,6 +34,7 @@ class Elips:
         self.pos_on_canvas = None
 
     def draw(self, canvas):
+        print("Draw " + self.name)
         if self.color == 'none':
             self.pos_on_canvas = canvas.create_oval(self.left_top.x, self.left_top.y, self.right_bottom.x, self.right_bottom.y, width = self.width)
         else:
@@ -43,6 +55,7 @@ class Round (Elips):
         left_top = TPoint(center.x + radius, center.y + radius)
         right_bottom = TPoint(center.x - radius, center.y - radius)
         Elips.__init__(self, color, left_top, right_bottom)
+        TShape.__init__(self, "Round")
 
 
 class Sector (Elips):
@@ -50,8 +63,10 @@ class Sector (Elips):
         self.angle = angle
         self.start_angle = startangle
         Elips.__init__(self, color, left_top, right_bottom)
+        TShape.__init__(self, "Sector")
 
     def draw(self, canvas):
+        print("Draw " + self.name)
         if self.color == 'none':
             self.pos_on_canvas = canvas.create_arc(self.left_top.x, self.left_top.y, self.right_bottom.x, self.right_bottom.y, start = self.start_angle, extent = self.angle, width = self.width)
         else:
