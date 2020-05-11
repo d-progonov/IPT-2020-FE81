@@ -19,6 +19,13 @@ try:
     for row in a:
         print(' '.join([str(ord(str(elem))) for elem in row]))
 
+####### С ЗАМЕНЕНИЕМ ТЕХ СИМВОЛОВ ЧТО НЕТ В ТАБЛИЦЕ НА ЗНАК ВОПРОСА #####
+    print("С ЗАМЕНЕНИЕМ ТЕХ СИМВОЛОВ ЧТО НЕТ В ТАБЛИЦЕ НА ЗНАК ВОПРОСА:")
+    for row in a:
+        print(row.encode('ascii','replace'))
+    print("С НЕ ОТОБРАЖЕНИЕМ ТЕХ СИМВОЛОВ ЧТО НЕТ В ТАБЛИЦЕ :")
+    for row in a:
+        print(row.encode('ascii','ignore'))
 except ValueError:
     print("Введите другое значаение для n!!!")
 
