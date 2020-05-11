@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import numpuy as np
+import numpy as np
 
 a=input("Enter a:")
 b=input("Enter b:")
