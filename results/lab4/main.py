@@ -65,7 +65,7 @@ def main():
         print(numbers)
 
       result = interpret(
-          input("lab5:{}> ".format(part)).strip(),
+          input("lab4:{}> ".format(part)).strip(),
           part,
           numbers
         )
