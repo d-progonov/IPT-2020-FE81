@@ -11,10 +11,6 @@ def func():
         print("Result:", y)
 
     except ValueError:
-        print("\n", "Error: non-numeric data.")
-    
-    except ZeroDivisionError:
-        print("\n", "Error: zero division!")
-        print(" Denominator must be non-zero!")
+        print("\n", "Error: wrong input data.")
 
 func()
