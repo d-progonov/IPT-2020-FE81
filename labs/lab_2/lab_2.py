@@ -6,8 +6,8 @@ def exit_func():
 def comparison():
     try:
         x = float(input("Please, input x number: "))
-        z = float(input("Please, input y number: "))
-        y = float(input("Please, input z number: "))
+        z = float(input("Please, input z number: "))
+        y = float(input("Please, input y number: "))
         if x < z :
             if x == y:
                 print("Minimum is x which equal to y:", x)
