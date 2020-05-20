@@ -14,7 +14,7 @@ def num_sum():
             res = res + 1/((3 * i - 2)*(3 * i + 1))
             i += 1
 
-        print("The sum of number series with n elements is: %.4f" %res)
+        print("The sum of number series with %d elements is: %.4f" % (n, res))
 
     except ValueError:
         print("\nPlease enter only an integer. \nRepeat your input.\n")
