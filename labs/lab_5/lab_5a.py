@@ -27,7 +27,7 @@ def decision():
     try:
         y = float(input("Enter y pls: "))
 
-        res = (1.7 * t(0.25) + 2 * t(1 + y))/6 - t(y**2 - 1)
+        res = (1.7 * t(0.25) + 2 * t(1 + y))/(6 - t(y**2 - 1))
         return float(res)
 
     except ZeroDivisionError:
