@@ -4,7 +4,7 @@ def exit_func():
       raise SystemExit(0)
 
 def open_file():
-    file_name = input("Please enter a condition file name: ")
+    file_name = input("Please enter way to a condition file: ")
     data = []
     try:
         with open(file_name, "r") as f:
@@ -22,7 +22,7 @@ def open_file():
 
 
     except FileNotFoundError:
-        print("You have to enter a name of existing file.")
+        print("You have to enter a wrong way or the way to existing file.")
         exit_func()
         open_file()
     
@@ -34,13 +34,13 @@ def open_file():
 
 def write_file(data):
     try:
-        file_name = input("Please enter a file name for saving results:")
+        file_name = input("Please enter a way to a file for saving results:")
 
         with open(file_name, "w") as f:
             f.write("Geometry progression result: %.2f" %data)            
     
     except FileNotFoundError:
-        print("You have to enter a name of existing file.")
+        print("You have to enter a wrong way or the way to existing file.")
         exit_func()
         write_file(data)
     
