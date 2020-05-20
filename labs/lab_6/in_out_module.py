@@ -11,8 +11,6 @@ def open_file():
             for line in f:
                 data.append([float(x) for x in line.split()])
         
-        print(data)
-
         if data[0][2] == 0:
             raise Exception("Please, enter a number of element, bigger than 0")
         
