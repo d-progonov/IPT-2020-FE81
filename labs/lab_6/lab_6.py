@@ -1,10 +1,10 @@
 import lab_5b as l5b
-import in_out_module as iom
+from in_out_module import *
 
 def main():
-    a, b, c = iom.open_file()
+    a, b, c = open_file()
     num = l5b.geom_progression(a, b, c)
-    iom.write_file(num)
+    write_file(num)
             
 
 if __name__ == "__main__":
