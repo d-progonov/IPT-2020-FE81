@@ -4,9 +4,9 @@ def exit_func():
       raise SystemExit(0)
 
 def open_file():
-    file_name = input("Please enter way to a condition file: ")
-    data = []
     try:
+        file_name = input("Please enter way to a condition file: ")
+        data = []
         with open(file_name, "r") as f:
             for line in f:
                 data.append([float(x) for x in line.split()])
@@ -16,20 +16,20 @@ def open_file():
         if data[0][2] == 0:
             raise Exception("Please, enter a number of element, bigger than 0")
         
+        a = data[0][0]
+        b = data[0][1]
+        c = data[0][2]
         print("Data was readed")
 
-        return data[0][0], data[0][1], data[0][2]
-
-
+        return a, b, c
     except FileNotFoundError:
         print("You have to enter a wrong way or the way to existing file.")
-        exit_func()
-        open_file()
     
     except Exception as e:
         print("", e)
-        exit_func()
-        open_file()
+        
+        
+
 
 
 def write_file(data):
@@ -41,8 +41,7 @@ def write_file(data):
     
     except FileNotFoundError:
         print("You have to enter a wrong way or the way to existing file.")
-        exit_func()
-        write_file(data)
+
     
     finally:
         print("Data was writed")
